@@ -1,0 +1,156 @@
+
+
+body{
+    background-image: url("C:/Users/harry/OneDrive/1st YEAR UTM/2nd SEMESTER 1stYEAR/WEB DESIGN 2nd Semester II WED/image for web/Screenshot_23-1-2025_231344_cdna.artstation.com.jpeg");
+background-position: center;
+background-size: 1555px;
+
+    display: flex;
+flex-direction: column;
+align-items: center;    
+justify-content: center;
+
+min-height: 100vh;
+margin: 0;
+}
+
+.header{
+    background-color: white;
+    height: 10px;
+    width: 50%;
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   border-bottom-right-radius: 20px;
+   border-bottom-left-radius: 20px;
+}
+.header1{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+    gap: 26px;
+   
+   
+}
+
+.header1 a{
+    text-decoration: none;
+}
+
+.header-a{
+color: black;
+}
+
+.bookshop{
+    font-size: 25px;
+    color: rgb(224, 173, 45);
+}
+
+
+.main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.main form{
+  background-color: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+  border: solid white;
+  border-radius: 16px;
+
+color: white;
+  height: 90vh;
+  width:90vw   ;
+}
+.book-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary{
+   border-color: rgba(0,0,0,0);
+    width: 90vw;
+    height: 90vh; 
+}
+.summary td{
+    padding: 20px;
+}
+.book-cover{
+    border-right-color: white;
+    width: 35%;
+    align-content: flex-start;
+}
+.book-cover img{
+  height: 60%;
+  width: 60%;
+}
+.book-cover section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.book-cover-info p{
+margin-top: 5px;
+}
+.price {
+    border: solid 2px white;
+   border-radius: 99px;
+   background-color: white;
+   outline-color: white; 
+
+    width: 30%;
+    height: 30px;
+    padding: 5px;
+
+    color: black;
+    font-size: 20px;
+}
+.book-cover button{
+    width: 25%;
+    height: 40px;
+    padding: 10px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: white;
+
+    border-radius: 99px;
+    border: solid 2px rgb(35, 211, 4);
+    outline: rgb(35, 211, 4);
+    background-color: rgb(35, 211, 4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.book-title{
+  align-content: flex-start;
+}
+.book-title h2{
+    border: solid 2px white;
+    border-radius: 99px;
+    background-color: white;
+    outline-color: white;
+
+    color: black;
+
+    width: fit-content;
+    padding: 5px;
+}
+    

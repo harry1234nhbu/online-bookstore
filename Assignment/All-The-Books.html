@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+body{
+    background-image: url("Images/background_all.jpg");
+}
+
+.options{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+    background: white;
+     
+    border: none;
+    border-radius: 99px;
+
+    position: absolute;
+    height: 90vh;
+    width: 90px;
+    right: 92.8vw;
+
+}
+.button-genre{
+   
+
+position: absolute;
+    height: 90vh;
+    width: 90px;
+
+    border-radius: 99px;
+
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+gap: 15px;
+    
+}
+
+.hidden {
+        display: none;
+    }
+
+    .button {
+        background-color: white;
+        padding: 10px;
+        font-size: 15px;
+        border: solid black 2px;
+        border-radius: 10px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        transition: ease 0.15s;
+        background-color: lightseagreen;
+        color: rgb(224, 173, 45);
+        font-weight: 500;
+        border: solid 2px rgb(224, 173, 45);
+        border-radius: 20px;
+    }
+
+    .button.selected {
+        background-color: lightseagreen;
+        color: rgb(224, 173, 45);
+        border: solid 2px rgb(224, 173, 45);
+    }
+
+</style>
+<link rel="stylesheet" href="CSS/all_books.css">
+<link rel="stylesheet" href="CSS/all_books_SummaryConfig.css">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+  
+    
+    <header class="all-book-header" id="all-book-header">
+<section>
+    <a href="review.html">
+        <p>Review</p>
+      </a>
+      <a href="contact_page.html">
+        <p>Contact</p>
+      </a>
+      <a class="bookshop"
+        href="Assignment_BookStore.html">
+        <p>T Emblemy Collectible Books</p>
+      </a>
+      <a href="All-The-Books.html">
+        <p>All Books</p>
+      </a> <a href="">
+        <p></p>
+      </a>
+</section>
+    </header>
+
+
+    <main class="all-book-main">
+        
+
+            
+          
+            
+                
+               
+              
+            
+        
+
+           
+   
+
+   <div class="button-genre options" id="options">
+                    <button class="button" onclick="toggleGenre('all')">All</button>
+                    <button class="button" onclick="toggleGenre('Fiction')">Fiction</button>
+                    <button class="button" onclick="toggleGenre('Mystery')">Mystery</button>
+                    <button class="button" onclick="toggleGenre('Adventure')">Adventure</button>
+                    <button class="button" onclick="toggleGenre('Action')">Action</button>
+                    <button class="button" onclick="toggleGenre('Supernatural')">Supernatural</button>
+                    <button class="button" onclick="toggleGenre('Comedy')">Comedy</button>
+                    <button class="button" onclick="toggleGenre('Romance')">Romance</button>
+                    <button class="button" onclick="toggleGenre('Magic')">Magic</button>
+                    <button class="button" onclick="toggleGenre('Science-Fiction')">Sci-Fi</button>
+                    <button class="button" onclick="toggleGenre('19th-century')">19-Centuty</button>
+                </div>
+
+        
+<form class="scroll-form" id="scroll-form" >
+    <section class="scroll-section">
+
+   <button class="display-summary books Fantasy Fiction Magic Romance" type="button" onclick="displaySummary('wicked-gods')">
+     <img src="Images/to_gaze.jpg" >
+<section class="all-title">To Gaze Upon Wicked Gods</section>
+</button>
+
+<button class="display-summary books Fantasy Magic Romance 19th-century" type="button" onclick="displaySummary('stand-still')">
+     <img src="Images/stand_still.jpg">
+    <section>Where the Dark Stands Still</section>
+    </button>
+
+    <button class="display-summary books Fantasy Supernatural Mystery Adventure Action" type="button" onclick="displaySummary('lotm')">
+         <img src= "Images/lotm.jpg">
+        <section>Lord of the Mysteries</section>
+        </button>
+
+        <button class="display-summary books Fantasy Fiction Science-Fiction Comedy" type="button" onclick="displaySummary('reader-v')">
+             <img src= "Images/reader_v.png">
+            <section>Omniscient Reader’s Viewpoint</section>
+            </button>
+
+  
+
+
+
+
+    <button class="display-summary books Mystery Adventure Science-Fiction Comedy" type="button" onclick="displaySummary('perfect-run')">
+         <img src= "Images/perfect_run.jpg">
+        <section>The Perfect Run</section>
+        </button>
+
+        <button class="display-summary books Mystery 19th-century" type="button" onclick="displaySummary('holmes')">
+             <img src= "Images/holmes.jpg">
+            <section>Holmes and Watson</section>
+            </button>
+
+            <button class="display-summary books Romance Adventure Fantasy Action" type="button" onclick="displaySummary('shadow')">
+                 <img src= "Images/shadow.jpg">
+                <section>Shadow Slave</section>
+                </button>
+
+                <button class="display-summary books Romance Adventure Fantasy 19th-century" type="button" onclick="displaySummary('mother')">
+                     <img src= "Images/mother.jpg">
+                    <section>Mother of Learning</section>
+                    </button>
+    
+
+
+    
+        <button class="display-summary books Fantasy Fiction" type="button" onclick="displaySummary('poppy')">
+             <img src= "Images/poppy_war.jpg">
+             <section>The Poppy War – Perang Opium</section>
+            </button>
+
+            <button class="display-summary books Fantasy Fiction" type="button" onclick="displaySummary('dragon')">
+                 <img src= "Images/dragon.jpg">
+                <section>The Dragon Republic</section>
+                </button>
+
+                <button class="display-summary books Mystery 19th-century" type="button" onclick="displaySummary('hyouka')">
+                     <img src= "Images/hyouka.jpg">
+                    <section>Hyouka</section>
+                    </button>
+
+                    <button class="display-summary books Adventure Fantasy Fiction 19th-century" type="button" onclick="displaySummary('hobbit')">
+                         <img src= "Images/hobbit.jpg">
+                        <section>The Hobbit</section>
+                        </button>
+       
+    
+    
+
+    </section>
+</form>
+
+
+
+
+
+
+<div  id="wicked-gods" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('wicked-gods')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images/to_gaze.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: Molly X. Chang</p>
+            <p>Date published: April 16, 2024</p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 780</section>
+        <button type="button" onclick="goToPage('wicked-gods')">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">To Gaze Upon Wicked Gods</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    She has power over death. He has power over her. When two enemies strike a dangerous bargain, 
+                    will they end a war . . . or ignite one?
+                    Heroes die, cowards live. Daughter of a conquered world, Ruying hates the invaders who descended from the heavens
+                     long before she was born and defeated the magic of her people with technologies unlike anything her world had ever seen.
+                     Blessed by Death, born with the ability to pull the life right out of mortal bodies, Ruying shouldn’t have to fear these foreign
+                      invaders, but she does. Especially because she wants to keep herself and her family safe.When Ruying’s Gift is discovered by
+                       an enemy prince, he offers her an impossible deal: If she becomes his private assassin and eliminates his political
+                        rivals–whose deaths he swears would be for the good of both their worlds and would protect her people from further 
+                        brutalization–her family will never starve or suffer harm again. But to accept this bargain, she must use the powers
+                         she has always feared, powers that will shave years off her own existence.Can Ruying trust this prince, whose promises of a 
+                         better world make her heart ache and whose smiles make her pulse beat faster? Are the evils of this agreement really in the 
+                         service of a much greater good? Or will she betray her entire nation by protecting those she loves the most?</p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Fantasy, Fiction, Magic, Romance 
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+<div  id="stand-still" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('stand-still')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images/stand_still.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: A.B. Poranek</p>
+            <p>Date published: February 27, 2024</p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 750</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">Where the Dark Stands Still</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    Raised in a small village near the spirit-wood, Liska Radost knows that Magic is monstrous,
+                     and its practitioners, monsters. After Liska unleashes her own powers with devastating consequences,
+                      she is caught by the demon warden of the wood – the Leszy – who offers her a bargain: one year of servitude in 
+                      exchange for a wish. Whisked away to his crumbling manor, Liska soon discovers the sinister roots of their bargain.
+                       And if she wants to survive the year and return home, she must unravel her host’s spool of secrets and face the
+                        ghosts of his past. Those who enter the wood do not always return…
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Fantasy, Magic, Romance, 19th-century
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+<div  id="lotm" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('lotm')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\lotm.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: Cuttlefish That Loves Diving</p>
+            <p>Date published: January 1, 2020</p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 820</section>
+        <button type="button" onclick="goToPage()" >Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">Lord of the Mysteries</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    Waking up to be faced with a string of mysteries, Zhou Mingrui finds himself reincarnated as Klein Moretti in 
+                    an alternate Victorian era world where he sees a world filled with machinery, cannons, dreadnoughts, airships,
+                     difference machines, as well as Potions, Divination, Hexes, Tarot Cards, Sealed Artifacts… The Light continues 
+                     to shine but the mystery has never gone far. Follow Klein as he finds himself entangled with the Churches of the
+                      world–both orthodox and unorthodox–while he slowly develops newfound powers thanks to the Beyonder potions.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Fantasy, supernatural, Mystery, Adventure, Action
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+
+<div  id="reader-v" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('reader-v')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\reader_v.png">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: Singshong</p>
+            <p>Date published: January 6, 2018
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 800</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">Omniscient Reader’s Viewpoint</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    Only I know the end of this world.One day our MC finds himself stuck in the world of his favorite webnovel.
+                     What does he do to survive? It is a world struck by catastrophe and danger all around.His edge? He knows the 
+                     plot of the story to the end. Because he was the sole reader that stuck with it.
+                      Read his story to see how he survives!
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Fantasy, Fiction, Science-Fiction, Comedy
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+<div  id="perfect-run" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('perfect-run')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\perfect_run.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: Maxime J. Durand (Void Herald)</p>
+            <p>Date published: February 13, 2018
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 800</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">The Perfect Run</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    Ryan «Quicksave» Romano is an eccentric adventurer with a strange power: he can create a save-point in time and redo 
+                    his life whenever he dies. Arriving in New Rome, the glitzy capital of sin of a rebuilding Europe, he finds the 
+                    city torn between mega-corporations, sponsored heroes, superpowered criminals, and true monsters. It’s a time of chaos,
+                     where potions can grant the power to rule the world and dangers lurk everywhere.
+
+                    Ryan only sees different routes; and from Hero to Villain, 
+                    he has to try them all. Only then will he achieve his perfect ending… no matter how many loops it takes.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Mystery, Adventure, Science-Fiction, Comedy
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+<div  id="holmes" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('holmes')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\holmes.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: June Thomson</p>
+            <p>Date published: December 31, 1995
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 1000</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">Holmes and Watson</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    A renowned Holmesian scholar presents a fictional biography of master sleuth Sherlock Holmes and Dr.
+                     Watson that focuses on the forty-six-year relationship between Holmes and Watson, discussing personalities,
+                      crime detection techniques, the development of their partnership, and much more.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Mystery, 19th-century
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+<div  id="shadow" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('shadow')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\shadow.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: Guiltythree</p>
+            <p>Date published: December 3, 2022
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 790</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">Shadow Slave</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    Growing up in poverty Sunny never expected anything good from life However even he did not anticipate being chosen 
+                    by the Nightmare Spell and becoming one of the Awakened an elite group of people gifted with supernatural powers
+                     Transported into a ruined magical world he found himself facing against terrible monsters and other Awakened in a deadly 
+                     battle of survival Whats worse the shadow powers he received happened to possess a small but potentially fatal side effect.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Romance, Adventure, Fantasy, Action
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+
+<div  id="mother" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('mother')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images/mother.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: Nobody103</p>
+            <p>Date published: June 15, 2022
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 800</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">Mother of Learning</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    Zorian is a teenage mage of humble birth and slightly aboveaverage skill attending his third year of education
+                     at Cyorias magical academy He is a driven and irritable young man consumed by a desire to ensure his own future
+                      and free himself of the influence of his family whom he resents for favoring his brothers over him Consequently 
+                      he has no time for pointless distractions or paying attention to other peoples problems As it happens time is
+                       something he is about to get plenty of On the eve of the Cyorias annual summer festival he is killed and brought 
+                       back to the beginning of the month just before he was about to take a train to Cyoria Suddenly trapped 
+                       in a time loop with no clear end or exit Zorian will have to look both within and without to unravel the
+                        mystery before him And he does have to unravel it for the time loop hadnt been made for his sake and dangers 
+                        lurk everywhere Repetition is the mother of learning but Zorian will have to first make sure he survives 
+                        to try again in a world of magic even a time traveler isnt safe from those who wish him ill.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Romance, Adventure, Fantasy, 19th-century
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+
+<div  id="poppy" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('poppy')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\poppy_war.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: R.F. Kuang</p>
+            <p>Date published: May 1, 2018
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 780</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">The Poppy War – Perang Opium</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    Everyone was shocked when Rin managed to enter Sinegard, the elite military academy in the Nikan Empire. 
+                    However, surprises are not always pleasant. Because she is considered a poor villager, Rin becomes a monthly.
+                     Especially because she is a woman. In a state of despair, Rin finds herself possessing a deadly supernatural 
+                     power – shamanism. Under the guidance of a teacher who is considered crazy, Rin learns that the gods who have
+                      been thought to be dead are still alive. The Nikan Empire lived peacefully, but its former colonizer, 
+                      the Mugen Federation, continued to lurk. Rin's shamanistic power may be the only one who can save the people, 
+                      but the more he gets to know the Phoenix god who chose him, the god full of wrath and vengeance, 
+                      the more worried he becomes. Winning the war may have to pay dearly with humanity. And maybe it's all too late.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Fantasy, Fiction
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+
+<div  id="dragon" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('dragon')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src=Images\dragon.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: R.F. Kuang</p>
+            <p>Date published: August 8, 2022
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 780</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">The Dragon Republic</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    In the aftermath of the Third Poppy War, shaman and warrior Rin is on the run: haunted by the atrocity 
+                    she committed to end the war, addicted to opium, and hiding from the murderous commands of her vengeful god,
+                     the fiery Phoenix. Her only reason for living is to get revenge on the traitorous Empress who sold out Nikan
+                      to their enemies. With no other options, Rin joins forces with the powerful Dragon Warlord, who has a plan to
+                       conquer Nikan, unseat the Empress, and create a new Republic. Rin throws herself into his war. After all, making 
+                       war is all she knows how to do. But the Empress is a more powerful foe than she appears, and the Dragon
+                        Warlord’s motivations are not as democratic as they seem. The more Rin learns, the more she fears her 
+                        love for Nikan will drive her away from every ally and lead her to rely more and more on the Phoenix’s deadly 
+                        power. Because there is nothing she won’t sacrifice for her country and her vengeance.
+                         The sequel to R.F. Kuang’s acclaimed debut THE POPPY WAR, THE DRAGON REPUBLIC combines
+                          the history of 20th-century China with a gripping world of gods and monsters, to devastating effect.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Fantasy, Fiction
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+<div  id="hobbit" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('hobbit')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\hobbit.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: J.R.R. Tolkien</p>
+            <p>Date published: September 21, 1937
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 1000</section>
+        <button type="button" onclick="goToPage()">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">The Hobbit</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+                     of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: 
+                     it was a hobbit-hole, and that means comfort.Written for J.R.R. Tolkien’s own children, The Hobbit met with instant
+                      critical acclaim when it was first published in 1937. Now recognized as a timeless classic, this introduction to the 
+                      hobbit Bilbo Baggins, the wizard Gandalf, Gollum, and the spectacular world of Middle-earth recounts of the
+                       adventures of a reluctant hero, a powerful and dangerous ring, and the cruel dragon Smaug the Magnificent. 
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Adventure, Fantasy, Fiction, 19th-century
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+<div  id="hyouka" class="div-summary">
+
+    <button class="back-button" type="button" onclick="back('hyouka')">BACK</button>
+        <form class="book-summary" >
+            <table class="summary" border="1">
+        <tr>
+            <td class="book-cover">
+           <section>
+
+            <img style="margin-top: 20px;" src="Images\hyouka.jpg">
+        </section>
+        
+        <section class="book-cover-info" style="margin-top: 40px; font-size: 20px;"><p>Author: R.F. Kuang</p>
+            <p>Date published: August 8, 2022
+            </p>
+        <p>Language: English</p></section>
+        <section>
+        <section class="price">Price: Rs 1000</section>
+        <button class="buy" id="buy" type="button" onclick="goToPage('hyouka')">Buy</button>
+        
+        </section>
+        </td>
+        
+            <td class="book-title">
+                <h2 style="font-weight: 1000;">Hyouka</h2>
+                <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: 750;">Summary</p>
+                
+                <p style="margin-top: -1%; font-size: 18px;">
+                    The classroom suddenly became a closed room. A book that is always borrowed every week.
+                     A boy who insists that he doesn’t have a collection of writings that should be there. And the truth from 
+                     33 years ago hidden in the collection of texts titled Hyouka.” Houtarou Oreki, an energy-saving boy who doesn’t 
+                     want to get involved in anything, is asked by his friends from the classical music club, which he joined by chance, 
+                     to solve one mysterious mystery hidden in everyday life one after another. Introducing a refreshing and slightly
+                      bittersweet youth mystery! Received the Encouragement Award at the 5th Kadokawa Gakuen Novel Awards.
+                        </p>
+        <br>
+                         <span style="font-size: 20px;">Book Genre:</span> Mystery, 19th-century
+                         
+            </td>
+        </tr>
+            </table>
+        </form>
+        
+</div>
+
+
+
+
+
+    </main>
+
+<script>
+
+function displaySummary(id){
+    const summary =document.getElementById(id);
+    const displayForm = document.getElementById("scroll-form");
+   const header = document.getElementById("all-book-header");
+   const options = document.getElementById("options");
+
+   if(summary.style.display === "none"){
+summary.style.display = "block";
+displayForm.style.display ="none";
+header.style.display = "none";
+options.style.display = "none";
+   }else{
+    summary.style.display ="none";
+    displayForm.style.display = "initial";
+    header.style.display = "flex";
+    options.style.display = "flex";
+   }
+}
+
+function back(id){
+    const summary = document.getElementById(id);
+    const displayForm = document.getElementById("scroll-form");
+    const header = document.getElementById("all-book-header");
+    const options = document.getElementById("options");
+
+    if(summary.style.display === "block"){
+summary.style.display ="none";
+displayForm.style.display = "initial";
+header.style.display = "flex";
+options.style.display = "flex";
+
+    }else{
+        summary.style.display = "block";
+displayForm.style.display ="none";
+header.style.display = "none";
+options.style.display = "none";
+
+    }
+}
+
+
+let selectedGenres = [];
+    
+    function toggleGenre(genre) {
+        const button = event.target;
+
+        if (genre === 'all') {
+            selectedGenres = [];
+            document.querySelectorAll('.button').forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+            filterBooks();
+            return;
+        }
+
+        if (selectedGenres.includes(genre)) {
+            selectedGenres = selectedGenres.filter(g => g !== genre);
+            button.classList.remove('selected');
+        } else {
+            selectedGenres.push(genre);
+            button.classList.add('selected');
+        }
+
+        if (selectedGenres.length === 0) {
+            document.querySelector('[onclick="toggleGenre(\'all\')"]').classList.add('selected');
+        } else {
+            document.querySelector('[onclick="toggleGenre(\'all\')"]').classList.remove('selected');
+        }
+
+        filterBooks();
+    }
+
+    function filterBooks() {
+        const books = document.querySelectorAll('.books');
+
+        books.forEach(book => {
+            if (selectedGenres.length === 0) {
+                book.classList.remove('hidden');
+                return;
+            }
+
+            const hasAllGenres = selectedGenres.every(genre => book.classList.contains(genre));
+            book.classList.toggle('hidden', !hasAllGenres);
+        });
+    } 
+
+    function goToPage(){
+window.location.href ="file:///C:/Users/harry/OneDrive/Desktop/Assignment%20WEBSITE/Assignment/Buy_info.html"
+    }
+
+
+
+</script>
+    
+
+
+
+
+
+</body>
+</html>

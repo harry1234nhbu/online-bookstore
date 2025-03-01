@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+
+    body{
+        background-image: url("Images/background_all.jpg");
+    }
+
+.buy-info{
+    position: relative;
+    width: 30vw;
+    height: 60vh;
+    
+    background: white;
+
+    border: solid rgba(225,225,225,0.7) 4px;
+    border-radius: 10px;
+
+padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+ margin: 20px;
+
+    position: relative;
+    width: 90%;
+    height: 50px;
+
+    padding: 20px;
+
+border: solid black 2px;
+border-radius: 99px;
+}
+.input::placeholder{
+    font-size: medium;
+
+}
+.input1{
+    position: relative;
+    height: 30px;
+    width: 40%;
+
+padding: 20px;
+
+border: solid black 2px;
+border-radius: 99px;
+}
+.input2{
+    position: relative;
+    height: 20px;
+    width: 30%;
+
+padding: 20px;
+
+border: solid black 2px;
+border-radius: 10px;
+
+}
+
+.button{
+    padding: 20px;
+
+    color: white;
+    font-size: large;
+    font-weight: 1000;
+
+border: solid white 2px;
+border-radius: 99px;
+
+background-color: rgb(35, 211, 4);
+}
+
+h1{
+text-align: center;
+
+    border: none ;
+    border-bottom: solid black 2px;
+    
+    position: relative;
+    width: 100%;
+}
+
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+    <link rel="stylesheet" href="CSS/header_main.css">
+    <header class="all-book-header" id="all-book-header">
+        <section>
+            <a href="review.html">
+                <p>Review</p>
+              </a>
+              <a href="contact_page.html">
+                <p>Contact</p>
+              </a>
+              <a class="bookshop"
+                href = "Assignment_BookStore.html">
+                <p>T Emblemy Collectible Books</p>
+              </a>
+              <a href="All-The-Books.html">
+                <p>All Books</p>
+              </a> <a href="">
+                <p></p>
+              </a>
+        </section>
+            </header>
+
+
+            <main>
+
+                <form class="buy-info">
+                    <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: 1000;">BUY</h1>
+
+<section class="input" style="border: none;">
+<input class="input1 " type="text" name="card-number" placeholder="card Number is required"> 
+
+<input class="input2" type="month" name="month-year" placeholder="month-year required">
+</section>
+
+<input class="input" type="text" name="cardholder-name" placeholder="card-holder Name">
+
+<input class="input" type="text" name="billing-address" placeholder="billing & delivery address">       
+
+<button class="button" type="submit">SUBMIT</button>
+
+
+                </form>
+            </main>
+</body>
+</html>
